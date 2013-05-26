@@ -1,4 +1,4 @@
-﻿Public Class Categoria
+﻿Public Class SubCategoria
 
     Private _id As Integer
     Public Property Id() As Integer
@@ -20,15 +20,17 @@
         End Set
     End Property
 
-    Private _subcategorias As List(Of SubCategoria)
-    Public Property SubCategorias() As List(Of SubCategoria)
+    Private _categoria As Categoria
+    Public Property Categoria() As Categoria
         Get
-            Return _subcategorias
+            Return _categoria
         End Get
-        Set(ByVal value As List(Of SubCategoria))
-            _subcategorias = value
+        Set(ByVal value As Categoria)
+            _categoria = value
         End Set
     End Property
+
+
 
 
 

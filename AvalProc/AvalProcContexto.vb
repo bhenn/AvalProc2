@@ -8,4 +8,6 @@ Public Class AvalProcContexto : Inherits DbContext
 
     Public Property Categorias As DbSet(Of Categoria)
 
+    Public Property SubCategorias As DbSet(Of SubCategoria)
+
 End Class

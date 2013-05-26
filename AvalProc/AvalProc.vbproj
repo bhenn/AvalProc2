@@ -162,6 +162,7 @@
     <Compile Include="Controllers\CategoriaController.vb" />
     <Compile Include="Controllers\EmpresaController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="Controllers\SubcategoriaController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -173,10 +174,15 @@
       <DependentUpon>201305261455526_categoria.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201305261455526_categoria.vb" />
+    <Compile Include="Migrations\201305261927484_subcategoria.Designer.vb">
+      <DependentUpon>201305261927484_subcategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305261927484_subcategoria.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\Avaliador.vb" />
     <Compile Include="Models\Categoria.vb" />
     <Compile Include="Models\Empresa.vb" />
+    <Compile Include="Models\SubCategoria.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201305261455526_categoria.resx">
       <DependentUpon>201305261455526_categoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305261927484_subcategoria.resx">
+      <DependentUpon>201305261927484_subcategoria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -298,6 +307,11 @@
     <Content Include="Views\Categoria\Create.vbhtml" />
     <Content Include="Views\Categoria\Edit.vbhtml" />
     <Content Include="Views\Categoria\Delete.vbhtml" />
+    <Content Include="Views\Subcategoria\Index.vbhtml" />
+    <Content Include="Views\Subcategoria\Details.vbhtml" />
+    <Content Include="Views\Subcategoria\Create.vbhtml" />
+    <Content Include="Views\Subcategoria\Edit.vbhtml" />
+    <Content Include="Views\Subcategoria\Delete.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
