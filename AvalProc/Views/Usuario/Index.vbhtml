@@ -1,8 +1,9 @@
-﻿@ModelType IEnumerable(Of AvalProc.SubCategoria)
+﻿@ModelType IEnumerable(Of AvalProc.Usuario)
 
 @Code
     ViewData("Title") = "Index"
 End Code
+
 <h2>Index</h2>
 
 <p>
@@ -11,10 +12,7 @@ End Code
 <table class="table table-striped">
     <tr>
         <th>
-            @Html.DisplayNameFor(Function(model) model.Descricao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(Function(model) model.Categoria.Descricao)
+            @Html.DisplayNameFor(Function(model) model.Email)
         </th>
         <th></th>
     </tr>
@@ -23,10 +21,7 @@ End Code
     Dim currentItem = item
     @<tr>
         <td>
-            @Html.DisplayFor(Function(modelItem) currentItem.Descricao)
-        </td>
-        <td>
-            @Html.DisplayFor(Function(modelItem) currentItem.Categoria.Descricao)
+            @Html.DisplayFor(Function(modelItem) currentItem.Email)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", New With {.id = currentItem.Id}) |

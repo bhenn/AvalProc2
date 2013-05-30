@@ -10,4 +10,6 @@ Public Class AvalProcContexto : Inherits DbContext
 
     Public Property SubCategorias As DbSet(Of SubCategoria)
 
+    Public Property Usuarios As DbSet(Of Usuario)
+
 End Class

@@ -9,7 +9,7 @@ Public Class SubcategoriaController
     ' GET: /Subcategoria/
 
     Function Index() As ActionResult
-        Return View(db.SubCategorias.ToList())
+        Return View(db.SubCategorias.Include(Function(x) x.Categoria).ToList())
     End Function
 
     '
@@ -27,7 +27,7 @@ Public Class SubcategoriaController
     ' GET: /Subcategoria/Create
 
     Function Create() As ActionResult
-        ViewBag.categorias = New SelectList(db.Categorias.ToList, "Id", "Descricao")
+        ViewBag.categoriaId = New SelectList(db.Categorias.ToList, "Id", "Descricao")
 
         Return View()
     End Function
@@ -43,6 +43,8 @@ Public Class SubcategoriaController
             db.SaveChanges()
             Return RedirectToAction("Index")
         End If
+
+        ViewBag.categoriaId = New SelectList(db.Categorias.ToList, "Id", "Descricao")
 
         Return View(subcategoria)
     End Function

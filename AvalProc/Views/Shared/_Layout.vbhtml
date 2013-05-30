@@ -12,7 +12,6 @@
 
 </head>
 <body>
-
     <div class="container">
         @RenderPage("~/Views/Shared/_Topo.vbhtml")
         <div class="row">

@@ -20,6 +20,8 @@
         End Set
     End Property
 
+    Public Property CategoriaId As Integer
+
     Private _categoria As Categoria
     Public Property Categoria() As Categoria
         Get

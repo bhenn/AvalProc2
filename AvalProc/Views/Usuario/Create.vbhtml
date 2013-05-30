@@ -1,4 +1,4 @@
-﻿@ModelType AvalProc.SubCategoria
+﻿@ModelType AvalProc.Usuario
 
 @Code
     ViewData("Title") = "Create"
@@ -11,22 +11,22 @@ End Code
     @Html.ValidationSummary(True)
 
     @<fieldset>
-        <legend>SubCategoria</legend>
+        <legend>Usuario</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(Function(model) model.Descricao)
+            @Html.LabelFor(Function(model) model.Email)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(Function(model) model.Descricao)
-            @Html.ValidationMessageFor(Function(model) model.Descricao)
+            @Html.EditorFor(Function(model) model.Email)
+            @Html.ValidationMessageFor(Function(model) model.Email)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(Function(model) model.Categoria)
+            @Html.LabelFor(Function(model) model.Senha)
         </div>
-        <div>
-            @Html.DropDownList("CategoriaId", String.Empty)
-            @Html.ValidationMessageFor(Function(model) model.Categoria)
+        <div class="editor-field">
+            @Html.PasswordFor(Function(model) model.Senha)
+            @Html.ValidationMessageFor(Function(model) model.Senha)
         </div>
 
         <p>
