@@ -12,4 +12,8 @@ Public Class AvalProcContexto : Inherits DbContext
 
     Public Property Usuarios As DbSet(Of Usuario)
 
+    Public Property Pas As DbSet(Of Pa)
+
+    Public Property Mps As DbSet(Of Mp)
+
 End Class

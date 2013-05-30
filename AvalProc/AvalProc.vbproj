@@ -165,6 +165,8 @@
     <Compile Include="Controllers\CategoriaController.vb" />
     <Compile Include="Controllers\EmpresaController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="Controllers\MpController.vb" />
+    <Compile Include="Controllers\PaController.vb" />
     <Compile Include="Controllers\SubcategoriaController.vb" />
     <Compile Include="Controllers\UsuarioController.vb" />
     <Compile Include="Global.asax.vb">
@@ -190,9 +192,15 @@
       <DependentUpon>201305302226330_categoriaid.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201305302226330_categoriaid.vb" />
+    <Compile Include="Migrations\201305302259140_pasEmps.Designer.vb">
+      <DependentUpon>201305302259140_pasEmps.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305302259140_pasEmps.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\Avaliador.vb" />
     <Compile Include="Models\Categoria.vb" />
+    <Compile Include="Models\Mp.vb" />
+    <Compile Include="Models\Pa.vb" />
     <Compile Include="Models\Empresa.vb" />
     <Compile Include="Models\SubCategoria.vb" />
     <Compile Include="Models\Usuario.vb" />
@@ -227,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201305302226330_categoriaid.resx">
       <DependentUpon>201305302226330_categoriaid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305302259140_pasEmps.resx">
+      <DependentUpon>201305302259140_pasEmps.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -336,6 +347,16 @@
     <Content Include="Views\Usuario\Delete.vbhtml" />
     <Content Include="Views\Usuario\Login.vbhtml" />
     <Content Include="Views\Home\About.vbhtml" />
+    <Content Include="Views\Pa\Index.vbhtml" />
+    <Content Include="Views\Pa\Details.vbhtml" />
+    <Content Include="Views\Pa\Create.vbhtml" />
+    <Content Include="Views\Pa\Edit.vbhtml" />
+    <Content Include="Views\Pa\Delete.vbhtml" />
+    <Content Include="Views\Mp\Index.vbhtml" />
+    <Content Include="Views\Mp\Details.vbhtml" />
+    <Content Include="Views\Mp\Create.vbhtml" />
+    <Content Include="Views\Mp\Edit.vbhtml" />
+    <Content Include="Views\Mp\Delete.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

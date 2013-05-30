@@ -6,6 +6,8 @@
             <li>@Html.ActionLink("Avaliador", "Index", "Avaliador")</li>
             <li>@Html.ActionLink("Categoria", "Index", "Categoria")</li>
             <li>@Html.ActionLink("Sub-categoria", "Index", "Subcategoria")</li>
+            <li>@Html.ActionLink("Atributo Processo", "Index", "Pa")</li>
+            <li>@Html.ActionLink("Mp", "Index", "Mp")</li>
         </ul>
     </div>
 </div>
