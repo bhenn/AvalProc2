@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewData("Title")</title>
     @Styles.Render("~/Content/bootstrap")
+
+    @Styles.Render("~/Content/themes/base/css")
+
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
 
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/bootstrap")
 
+    @Scripts.Render("~/bundles/jqueryval")
+
+    
+    
 </head>
 <body>
     <div class="container">

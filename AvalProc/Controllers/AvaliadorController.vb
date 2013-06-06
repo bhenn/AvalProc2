@@ -12,15 +12,8 @@ Public Class AvaliadorController
         Return View(db.Avaliadores.ToList())
     End Function
 
-    '
-    ' GET: /Avaliador/Details/5
-
-    Function Details(Optional ByVal id As Integer = Nothing) As ActionResult
-        Dim avaliador As Avaliador = db.Avaliadores.Find(id)
-        If IsNothing(avaliador) Then
-            Return HttpNotFound()
-        End If
-        Return View(avaliador)
+    Function List() As ActionResult
+        Return PartialView(db.Avaliadores.ToList())
     End Function
 
     '
@@ -53,19 +46,18 @@ Public Class AvaliadorController
         If IsNothing(avaliador) Then
             Return HttpNotFound()
         End If
-        Return View(avaliador)
+        Return PartialView(avaliador)
     End Function
 
     '
     ' POST: /Avaliador/Edit/5
 
     <HttpPost()> _
-    <ValidateAntiForgeryToken()> _
     Function Edit(ByVal avaliador As Avaliador) As ActionResult
         If ModelState.IsValid Then
             db.Entry(avaliador).State = EntityState.Modified
             db.SaveChanges()
-            Return RedirectToAction("Index")
+            Return RedirectToAction("List")
         End If
 
         Return View(avaliador)

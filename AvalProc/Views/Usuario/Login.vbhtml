@@ -5,35 +5,27 @@
     ViewData("Title") = "Login"
 End Code
 
-<h2>Login</h2>
 
-@Using Html.BeginForm()
-    @<fieldset>
-        <legend>Usuário</legend>
-
-        <div class="editor-label">
-            @Html.LabelFor(Function(model) model.Email)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(Function(model) model.Email)
-
-            @Html.ValidationMessageFor(Function(model) model.Email)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(Function(model) model.Senha)
-        </div>
-        <div class="editor-field">
-            @Html.PasswordFor(Function(model) model.Senha)
-            @Html.ValidationMessageFor(Function(model) model.Senha)
-        </div>
-        
-        <p>
-            <input type="submit" value="Login" />
-        </p>
-     </fieldset>
+<div class="span3">
     
-End Using
+    
+        @Using Html.BeginForm()
+            
+        @<fieldset>
+            <legend>Login</legend>
+
+            <input type="text" class="input-block-level" id="Email" name="Email" placeholder="Email" />
+            <input type="password" class="input-block-level" id="Senha" name="Senha" placeholder="Senha" >
+
+            <p>
+                <button class="btn" type="submit">Login</button>
+            </p>
+         </fieldset>
+            
+        End Using
+
+</div>
+
 
 @Section Scripts
     @Scripts.Render("~/bundles/jqueryval")

@@ -8,6 +8,8 @@
             <li>@Html.ActionLink("Sub-categoria", "Index", "Subcategoria")</li>
             <li>@Html.ActionLink("Atributo Processo", "Index", "Pa")</li>
             <li>@Html.ActionLink("Mp", "Index", "Mp")</li>
+            <li class="nav-header">Avaliação</li>
+            <li>@Html.ActionLink("Avaliação", "Index", "Avaliacao")</li>
         </ul>
     </div>
 </div>
