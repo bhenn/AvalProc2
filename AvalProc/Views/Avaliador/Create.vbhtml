@@ -1,13 +1,11 @@
 ﻿@ModelType AvalProc.Avaliador
 
-@Code
-    ViewData("Title") = "Create"
-End Code
-
-<h2>Create</h2>
-
-@Using Html.BeginForm()
-    @Html.AntiForgeryToken()
+@Using (Ajax.BeginForm("Create", "Avaliador", New AjaxOptions With {
+            .InsertionMode = InsertionMode.Replace,
+            .HttpMethod = "POST",
+            .OnSuccess = "createSuccess"
+        }, New With {.id = "updateAvaliadorForm"}))
+    
     @Html.ValidationSummary(True)
 
     @<fieldset>
@@ -28,16 +26,9 @@ End Code
             @Html.EditorFor(Function(model) model.Cpf)
             @Html.ValidationMessageFor(Function(model) model.Cpf)
         </div>
-
-        <p>
-            <input type="submit" value="Create" />
-        </p>
     </fieldset>
 End Using
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @Section Scripts
     @Scripts.Render("~/bundles/jqueryval")

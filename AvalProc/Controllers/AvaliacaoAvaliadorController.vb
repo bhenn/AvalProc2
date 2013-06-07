@@ -8,9 +8,15 @@ Public Class AvaliacaoAvaliadorController
     '
     ' GET: /AvaliacaoAvaliador
     Function Index() As ActionResult
-        Return View()
+        Return PartialView()
     End Function
 
+    Function List(avalId As Integer) As PartialViewResult
+        Dim lista As List(Of Avaliacao_Avaliador)
+        lista = db.AvaliacaoAvaliadores.Where(Function(x) x.AvaliacaoId = avalId).Include(Function(x) x.Avaliador).Include(Function(x) x.TipoAvaliador).ToList()
+
+        Return PartialView(lista)
+    End Function
 
     '
     ' GET: /Avaliacao/Create

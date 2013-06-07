@@ -1,17 +1,14 @@
 ﻿@ModelType AvalProc.Avaliacao
 
-@Code
-    ViewData("Title") = "Create"
-End Code
+@Using (Ajax.BeginForm("Create", "Avaliacao", New AjaxOptions With {
+            .InsertionMode = InsertionMode.Replace,
+            .HttpMethod = "POST",
+            .OnSuccess = "createSuccess"
+        }, New With {.id = "updateAvaliacaoForm"}))
 
-<h2>Create</h2>
-
-@Using Html.BeginForm()
-    @Html.AntiForgeryToken()
     @Html.ValidationSummary(True)
-
+    
     @<fieldset>
-        <legend>Avaliacao</legend>
 
         <div class="editor-label">
             @Html.LabelFor(Function(model) model.Descricao)
@@ -25,19 +22,12 @@ End Code
             @Html.LabelFor(Function(model) model.EmpresaId, "Empresa")
         </div>
         <div class="editor-field">
-            @Html.DropDownList("EmpresaId", String.Empty)
+            @Html.DropDownListFor(Function(model) model.EmpresaId , ViewBag.EmpresaId)
             @Html.ValidationMessageFor(Function(model) model.EmpresaId)
         </div>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
     </fieldset>
 End Using
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @Section Scripts
     @Scripts.Render("~/bundles/jqueryval")

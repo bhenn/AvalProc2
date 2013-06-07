@@ -1,13 +1,13 @@
-﻿@modeltype IEnumerable(Of AvalProc.avaliador)
+﻿@modeltype IEnumerable(Of AvalProc.avaliacao)
 
 
 <table class="table table-striped table-condensed">
     <tr>
         <th>
-            @Html.DisplayNameFor(Function(model) model.Nome)
+            @Html.DisplayNameFor(Function(model) model.Descricao)
         </th>
         <th>
-            @Html.DisplayNameFor(Function(model) model.Cpf)
+            @Html.DisplayNameFor(Function(model) model.Empresa.Nome)
         </th>
         <th></th>
     </tr>
@@ -16,10 +16,10 @@
     Dim currentItem = item
     @<tr>
         <td>
-            @Html.ActionLink(currentItem.Nome, "Edit", New With {.id = currentItem.Id}, New With {.class = "editLink"})
+            @Html.ActionLink(currentItem.Descricao, "Edit", New With {.id = currentItem.Id}, New With {.class = "editLink"})
         </td>
         <td>
-            @Html.DisplayFor(Function(modelItem) currentItem.Cpf)
+            @Html.DisplayFor(Function(modelItem) currentItem.Empresa.Nome)
         </td>
 
         @code

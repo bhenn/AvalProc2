@@ -228,6 +228,10 @@
       <DependentUpon>201306050155014_teste.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201306050155014_teste.vb" />
+    <Compile Include="Migrations\201306070043189_decorators.Designer.vb">
+      <DependentUpon>201306070043189_decorators.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201306070043189_decorators.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\Avaliacao.vb" />
     <Compile Include="Models\Avaliacao_Avaliador.vb" />
@@ -292,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201306050155014_teste.resx">
       <DependentUpon>201306050155014_teste.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306070043189_decorators.resx">
+      <DependentUpon>201306070043189_decorators.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -400,7 +407,6 @@
     <Content Include="Views\Avaliador\Index.vbhtml" />
     <Content Include="Views\Avaliador\Create.vbhtml" />
     <Content Include="Views\Avaliador\Edit.vbhtml" />
-    <Content Include="Views\Avaliador\Delete.vbhtml" />
     <Content Include="Views\Categoria\Index.vbhtml" />
     <Content Include="Views\Categoria\Details.vbhtml" />
     <Content Include="Views\Categoria\Create.vbhtml" />
@@ -427,10 +433,8 @@
     <Content Include="Views\Mp\Edit.vbhtml" />
     <Content Include="Views\Mp\Delete.vbhtml" />
     <Content Include="Views\Avaliacao\Index.vbhtml" />
-    <Content Include="Views\Avaliacao\Details.vbhtml" />
     <Content Include="Views\Avaliacao\Create.vbhtml" />
     <Content Include="Views\Avaliacao\Edit2.vbhtml" />
-    <Content Include="Views\Avaliacao\Delete.vbhtml" />
     <Content Include="Views\TipoAvaliador\Index.vbhtml" />
     <Content Include="Views\TipoAvaliador\Details.vbhtml" />
     <Content Include="Views\TipoAvaliador\Create.vbhtml" />
@@ -442,6 +446,8 @@
     <Content Include="Views\Avaliacao\Edit.vbhtml" />
     <Content Include="Views\Teste\Index.vbhtml" />
     <Content Include="Views\Avaliador\List.vbhtml" />
+    <Content Include="Views\Avaliacao\List.vbhtml" />
+    <Content Include="Views\AvaliacaoAvaliador\List.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
