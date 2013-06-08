@@ -1,70 +1,72 @@
 ﻿Imports System.Data.Entity
 
 <Authorize>
-Public Class AvaliadorController
+Public Class ProcessoController
     Inherits System.Web.Mvc.Controller
 
     Private db As New AvalProcContexto
 
     '
-    ' GET: /Avaliador/
+    ' GET: /Processo/
     Function Index() As ActionResult
         Return View()
     End Function
 
     Function List() As ActionResult
-        Return PartialView(db.Avaliadores.ToList())
+        Return PartialView(db.Processos.ToList())
     End Function
 
     '
-    ' GET: /Avaliador/Create
+    ' GET: /Processo/Create
     Function Create() As ActionResult
+        ViewBag.SubCategoriaId = New SelectList(db.SubCategorias, "Id", "Descricao")
         Return PartialView()
     End Function
 
     '
-    ' POST: /Avaliador/Create
+    ' POST: /Processo/Create
 
     <HttpPost()> _
-    Function Create(ByVal avaliador As Avaliador) As ActionResult
+    Function Create(ByVal processo As Processo) As ActionResult
         If ModelState.IsValid Then
-            db.Avaliadores.Add(avaliador)
+            db.Processos.Add(processo)
             db.SaveChanges()
             Return RedirectToAction("List")
         End If
 
-        Return View(avaliador)
+        ViewBag.SubCategoriaId = New SelectList(db.SubCategorias, "Id", "Descricao")
+        Return View(processo)
     End Function
 
     '
-    ' GET: /Avaliador/Edit/5
+    ' GET: /Processo/Edit/5
     Function Edit(Optional ByVal id As Integer = Nothing) As ActionResult
-        Dim avaliador As Avaliador = db.Avaliadores.Find(id)
-        If IsNothing(avaliador) Then
+        Dim processo As Processo = db.Processos.Find(id)
+        If IsNothing(processo) Then
             Return HttpNotFound()
         End If
-        Return PartialView(avaliador)
+        Return PartialView(processo)
     End Function
 
     '
-    ' POST: /Avaliador/Edit/5
+    ' POST: /Processo/Edit/5
     <HttpPost()> _
-    Function Edit(ByVal avaliador As Avaliador) As ActionResult
+    Function Edit(ByVal Processo As Processo) As ActionResult
         If ModelState.IsValid Then
-            db.Entry(avaliador).State = EntityState.Modified
+            db.Entry(Processo).State = EntityState.Modified
             db.SaveChanges()
             Return RedirectToAction("List")
         End If
 
-        Return PartialView(avaliador)
+        Return PartialView(Processo)
     End Function
 
     '
-    ' POST: /Avaliador/Delete/5
+    ' POST: /Processo/Delete/5
     <HttpPost()>
     Function Delete(ByVal id As Integer) As ActionResult
-        Dim avaliador As Avaliador = db.Avaliadores.Find(id)
-        db.Avaliadores.Remove(avaliador)
+        Dim Processo As Processo = db.Processos.Find(id)
+        db.Processos.Remove(Processo)
         db.SaveChanges()
         Return RedirectToAction("List")
     End Function

@@ -15,10 +15,10 @@
 
             @code
             Dim ajaxOptions As New AjaxOptions
-            ajaxOptions.UpdateTargetId = "tab2"
             ajaxOptions.OnFailure = "alert('Erro desconhecido');"
             ajaxOptions.Confirm = "Tem certeza que deseja excluir ?"
             ajaxOptions.HttpMethod = "POST"
+            ajaxOptions.OnSuccess = "deleteSuccess"
             End Code
 
             <td>

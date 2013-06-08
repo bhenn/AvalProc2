@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewData("Title")</title>
+    @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/bootstrap")
 
     @Styles.Render("~/Content/themes/base/css")
@@ -16,12 +17,12 @@
 
     @Scripts.Render("~/bundles/jqueryval")
 
-    
-    
 </head>
 <body>
-    <div class="container">
+    <div id="mainNav" class="navbar navbar-inverse navbar-fixed-top">
         @RenderPage("~/Views/Shared/_Topo.vbhtml")
+    </div>
+    <div class="container">
         <div class="row">
             @RenderPage("~/Views/Shared/_MenuDireita.vbhtml")
             <div class="span9">

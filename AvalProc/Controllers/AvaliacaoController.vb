@@ -1,5 +1,6 @@
 ﻿Imports System.Data.Entity
 
+<Authorize>
 Public Class AvaliacaoController
     Inherits System.Web.Mvc.Controller
 

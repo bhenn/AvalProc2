@@ -1,39 +1,19 @@
-﻿Public Class SubCategoria
+﻿Imports System.ComponentModel.DataAnnotations
+Imports System.ComponentModel.DataAnnotations.Schema
 
-    Private _id As Integer
+<Table("Subcategoria")>
+Public Class SubCategoria
+
+    <Key>
     Public Property Id() As Integer
-        Get
-            Return _id
-        End Get
-        Set(ByVal value As Integer)
-            _id = value
-        End Set
-    End Property
 
-    Private _descricao As String
+    <Required(ErrorMessage:="Obrigatório")>
     Public Property Descricao() As String
-        Get
-            Return _descricao
-        End Get
-        Set(ByVal value As String)
-            _descricao = value
-        End Set
-    End Property
 
+    <Required(ErrorMessage:="Obrigatório")>
     Public Property CategoriaId As Integer
-
-    Private _categoria As Categoria
     Public Property Categoria() As Categoria
-        Get
-            Return _categoria
-        End Get
-        Set(ByVal value As Categoria)
-            _categoria = value
-        End Set
-    End Property
 
-
-
-
+    Public Property Processos As List(Of Processo)
 
 End Class

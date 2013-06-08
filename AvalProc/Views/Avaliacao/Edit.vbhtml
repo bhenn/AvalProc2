@@ -37,11 +37,6 @@ End Code
  End Using
 
 <div>
-    @Ajax.ActionLink("Atualizar", "ListAvaliador", "Avaliacao" , New With {.avalId = 1}, New AjaxOptions With {.UpdateTargetId = "tab2"})
-
     @Html.ActionLink("Back to List", "Index")
 </div>
 
-@Section Scripts
-    @Scripts.Render("~/bundles/jqueryval")
-End Section

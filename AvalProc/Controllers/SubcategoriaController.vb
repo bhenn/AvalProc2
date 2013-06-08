@@ -1,5 +1,6 @@
 ﻿Imports System.Data.Entity
 
+<Authorize>
 Public Class SubcategoriaController
     Inherits System.Web.Mvc.Controller
 

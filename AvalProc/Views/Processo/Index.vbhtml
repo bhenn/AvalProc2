@@ -1,20 +1,24 @@
-﻿@Code
-    ViewData("Title") = "Avaliador"
+﻿@ModelType IEnumerable(Of AvalProc.processo)
+
+@Code
+    ViewData("Title") = "Processo"
 End Code
 
-<div id="commonMessage" class="alert alert-success" style="display: none;"></div>
+<h3>Processos</h3>
+<div id="commonMessage" class="alert alert-success" style="display: none; float:none  "></div>
+ 
 <p>
-    @Html.ActionLink("Novo", "Create",  New With{.avalId = ViewBag.avalId}, New With{.class = "btn btn-small createLink"})
+    @Html.ActionLink("Novo", "Create", Nothing, New With {.class = "btn btn-small createLink"})
 </p>
 
 <div id="lista">
     @code
-        Html.RenderAction("List", New With {.avalId = ViewBag.avalId})
+        Html.RenderAction("List")
     End Code
 
 </div>
 
-<div id="updateDialog" ></div>
+<div id="updateDialog" title="Alterar Processo"></div>
 
 <script type="text/javascript">
     var linkObj;
@@ -29,14 +33,14 @@ End Code
             buttons: {
                 "Salvar": function () {
                     $("#update-message").html(''); //make sure there is nothing on the message before we continue                         
-                    $("#updateAvaliacaoAvaliadorForm").submit();
+                    $("#updateProcessoForm").submit();
                 },
                 "Cancelar": function () {
                     $(this).dialog("close");
                 }
             }
         });
-
+        
         atribuiAcao();
 
     })
@@ -51,7 +55,7 @@ End Code
             $.get(viewUrl, function (data) {
                 dialogDiv.html(data);
                 //validation
-                var $form = $("#updateAvaliacaoAvaliadorForm");
+                var $form = $("#updateProcessoForm");
                 // Unbind existing validation
                 $form.unbind();
                 $form.data("validator", null);
@@ -65,28 +69,52 @@ End Code
             return false;
         });
 
+        //EDIT
+        $(".editLink").click(function () {
+            //change the title of the dialog
+            linkObj = $(this);
+            var dialogDiv = $('#updateDialog');
+            var viewUrl = linkObj.attr('href');
+            $.get(viewUrl, function (data) {
+                dialogDiv.html(data);
+                //validation
+                var $form = $("#updateProcessoForm");
+                // Unbind existing validation
+                $form.unbind();
+                $form.data("validator", null);
+                // Check document for changes
+                $.validator.unobtrusive.parse(document);
+                // Re add validation with changes
+                $form.validate($form.data("unobtrusiveValidation").options);
+                //open dialog
+                dialogDiv.dialog('open');
+            });
+            return false;
+        });
 
     }
 
-
-
     function createSuccess(data) {
-        atualizaLista(data, "Avaliador associado com sucesso");
+        atualizaLista(data, "Processo incluído com sucesso");
+    }
+
+    function updateSuccess(data) {
+        atualizaLista(data, "Processo atualizado com sucesso");
     }
 
     function deleteSuccess(data) {
-        atualizaLista(data, "Avaliador desassociado com sucesso");
+        atualizaLista(data, "Processo excluído com sucesso");
     }
 
-    function atualizaLista(data, mensagem) {
+    function atualizaLista(data,mensagem) {
         $('#lista').html(data);
 
         atribuiAcao();
 
         $('#updateDialog').dialog('close');
         $('#commonMessage').html(mensagem);
-        $('#commonMessage').fadeIn('slow');
-        $('#commonMessage').fadeOut(4000);
-        //$('#commonMessage').slideDown(200).delay(2000).slideUp(200);
+        $('#commonMessage').slideDown(200).delay(2000).slideUp(200);
     }
 </script>
+
+

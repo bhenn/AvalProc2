@@ -1,5 +1,6 @@
 ﻿Imports System.Data.Entity
 
+<Authorize>
 Public Class PaController
     Inherits System.Web.Mvc.Controller
 

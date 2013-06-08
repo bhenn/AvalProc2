@@ -1,16 +1,30 @@
-﻿<div class="navbar">
-    <div class="navbar-inner">
+﻿<div class="navbar-inner">
+    <div class="container">
         <ul class="nav">
-            <li>@Html.ActionLink("Home","Index","Home")</li>
-            <li>@Html.ActionLink("Sobre","About","Home")</li>
-        </ul>
-        <div style="width: auto; text-align:right">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Sobre", "About", "Home")</li>
+
             @If Request.IsAuthenticated Then
-                @Html.ActionLink(" Logout ", "logout", "Usuario")
+                @<li class="dropdown pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> @Request.LogonUserIdentity.Name  <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            @Html.ActionLink(" Logout ", "logout", "Usuario")
+                            @Html.ActionLink(" Registrar ", "create", "Usuario")
+                        </li>
+                    </ul>
+                </li>
+                
             Else
-                @Html.ActionLink(" Registrar ", "create", "Usuario")
-                @Html.ActionLink("Login", "Login", "Usuario")
+                @<li class="dropdown pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuário<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            @Html.ActionLink("Login", "Login", "Usuario")
+                        </li>
+                    </ul>
+                </li>
             End If
-        </div>
+        </ul>
     </div>
 </div>

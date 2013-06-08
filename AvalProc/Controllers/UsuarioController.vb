@@ -1,5 +1,6 @@
 ﻿Imports System.Data.Entity
 
+<Authorize>
 Public Class UsuarioController
     Inherits System.Web.Mvc.Controller
 
@@ -7,11 +8,13 @@ Public Class UsuarioController
 
 
     <HttpGet>
+    <AllowAnonymous>
     Function Login() As ActionResult
         Return View()
     End Function
 
     <HttpPost()> _
+    <AllowAnonymous>
     Public Function Login(ByVal usuario As Usuario, ByVal returnUrl As String) As ActionResult
 
         If ModelState.IsValid Then
@@ -28,7 +31,7 @@ Public Class UsuarioController
         Return View()
     End Function
 
-
+    <AllowAnonymous>
     Function Logout() As ActionResult
 
         FormsAuthentication.SignOut()

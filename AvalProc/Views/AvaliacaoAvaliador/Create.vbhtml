@@ -4,11 +4,11 @@
     ViewData("Title") = "Create"
 End Code
 
-<h2>Create</h2>
-
-@Using Html.BeginForm()
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(True)
+@Using (Ajax.BeginForm("Create", "AvaliacaoAvaliador", New AjaxOptions With {
+            .InsertionMode = InsertionMode.Replace,
+            .HttpMethod = "POST",
+            .OnSuccess = "createSuccess"
+        }, New With {.id = "updateAvaliacaoAvaliadorForm"}))
 
     @<fieldset>
         <legend>@ViewBag.Avaliacao.Descricao</legend>
@@ -34,13 +34,7 @@ End Code
             @Html.DropDownList("TipoAvaliadorId", String.Empty)
             @Html.ValidationMessageFor(Function(model) model.TipoAvaliador)
         </div>
-
-        <p>
-            <input type="submit" value="Incluir" class="btn" />
-        </p>
     </fieldset>
 End Using
 
-@Section Scripts
-    @Scripts.Render("~/bundles/jqueryval")
-End Section
+

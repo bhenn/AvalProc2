@@ -24,4 +24,6 @@ Public Class AvalProcContexto : Inherits DbContext
 
     Public Property Testes As DbSet(Of Teste)
 
+    Public Property Processos As DbSet(Of Processo)
+
 End Class
