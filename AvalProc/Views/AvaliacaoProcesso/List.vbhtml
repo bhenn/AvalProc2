@@ -1,28 +1,25 @@
-﻿@modeltype List(Of AvalProc.Avaliacao_Avaliador)
-
+﻿@modeltype List(Of AvalProc.Avaliacao_Processo)
 
 <table class="table table-striped">
     <tr>
-        <th>Avaliador</th>
-        <th>Tipo</th>
+        <th>Processo</th>
         <th></th>
     </tr>
 
     @For Each item In Model
         @<tr>
-            <td>@item.Avaliador.Nome</td>
-            <td>@item.TipoAvaliador.Descricao</td>
+            <td>@item.Processo.Descricao  </td>
 
             @code
             Dim ajaxOptions As New AjaxOptions
             ajaxOptions.OnFailure = "alert('Erro desconhecido');"
             ajaxOptions.Confirm = "Tem certeza que deseja excluir ?"
             ajaxOptions.HttpMethod = "POST"
-            ajaxOptions.OnSuccess = "deleteAvaliadorSuccess"
+            ajaxOptions.OnSuccess = "desassociaProcessoSuccess"
             End Code
 
             <td>
-                @Ajax.ActionLink("Excluir", "Delete", New With {.controller = "AvaliacaoAvaliador", .avalId = 1, .avaliacaoAvaliadorId = item.Id}, ajaxOptions,New With{.class = "btn"})
+                @Ajax.ActionLink("Excluir", "Delete", New With {.controller = "AvaliacaoProcesso", .avalId = 1, .avaliacaoProcessoId = item.Id}, ajaxOptions,New With{.class = "btn"})
             </td>
         </tr>
     Next

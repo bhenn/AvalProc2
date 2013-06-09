@@ -1,4 +1,4 @@
-﻿@modeltype IEnumerable(Of AvalProc.Processo)
+﻿@modeltype IEnumerable(Of AvalProc.processo)
 
 
 <table class="table table-striped table-condensed">
@@ -7,7 +7,7 @@
             @Html.DisplayNameFor(Function(model) model.Descricao)
         </th>
         <th>
-            @Html.DisplayNameFor(Function(model) model.SubCategoria.Descricao)
+            Subcategoria
         </th>
         <th></th>
     </tr>

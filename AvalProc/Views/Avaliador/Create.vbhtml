@@ -5,7 +5,8 @@
             .HttpMethod = "POST",
             .OnSuccess = "createSuccess"
         }, New With {.id = "updateAvaliadorForm"}))
-    
+
+    @Html.AntiForgeryToken()
     @Html.ValidationSummary(True)
 
     @<fieldset>

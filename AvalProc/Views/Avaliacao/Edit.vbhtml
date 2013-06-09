@@ -13,6 +13,7 @@ End Code
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#tab1" data-toggle="tab">Informações</a></li>
                 <li><a href="#tab2" data-toggle="tab">Avaliadores</a></li>
+                <li><a href="#tab3" data-toggle="tab">Processos</a></li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="tab1">
@@ -26,9 +27,15 @@ End Code
                     </p>
                 </div>
                 
-                 <div class="tab-pane" id="tab2">
+                <div class="tab-pane" id="tab2">
                      @code
                          Html.RenderAction("Index", "AvaliacaoAvaliador", New With {.avalId = Model.Id})
+                     End Code
+                </div>
+
+                <div class="tab-pane" id="tab3">
+                     @code
+                         Html.RenderAction("Index", "AvaliacaoProcesso", New With {.avalId = Model.Id})
                      End Code
                 </div>
             </div>
@@ -36,7 +43,9 @@ End Code
     </fieldset>
  End Using
 
+<div id="updateDialog"></div>
+
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar", "Index",Nothing,New with{.class="btn"})
 </div>
 

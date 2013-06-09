@@ -1,0 +1,15 @@
+﻿Imports System.ComponentModel.DataAnnotations
+Imports System.ComponentModel.DataAnnotations.Schema
+
+<Table("AvaliacaoProcesso")>
+Public Class Avaliacao_Processo
+    <Key>
+    Public Property Id() As Integer
+
+    Public Property AvaliacaoId As Integer
+    Public Property Avaliacao As Avaliacao
+
+    Public Property ProcessoId As Integer
+    Public Property Processo As Processo
+
+End Class

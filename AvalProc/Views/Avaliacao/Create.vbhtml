@@ -3,7 +3,7 @@
 @Using (Ajax.BeginForm("Create", "Avaliacao", New AjaxOptions With {
             .InsertionMode = InsertionMode.Replace,
             .HttpMethod = "POST",
-            .OnSuccess = "createSuccess"
+            .OnSuccess = "createAvaliacaoSuccess"
         }, New With {.id = "updateAvaliacaoForm"}))
 
     @Html.ValidationSummary(True)

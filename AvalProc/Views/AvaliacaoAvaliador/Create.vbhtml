@@ -7,7 +7,7 @@ End Code
 @Using (Ajax.BeginForm("Create", "AvaliacaoAvaliador", New AjaxOptions With {
             .InsertionMode = InsertionMode.Replace,
             .HttpMethod = "POST",
-            .OnSuccess = "createSuccess"
+            .OnSuccess = "createAvaliadorSuccess"
         }, New With {.id = "updateAvaliacaoAvaliadorForm"}))
 
     @<fieldset>

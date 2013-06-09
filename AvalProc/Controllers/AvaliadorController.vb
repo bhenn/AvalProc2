@@ -26,6 +26,7 @@ Public Class AvaliadorController
     ' POST: /Avaliador/Create
 
     <HttpPost()> _
+    <ValidateAntiForgeryToken()> _
     Function Create(ByVal avaliador As Avaliador) As ActionResult
         If ModelState.IsValid Then
             db.Avaliadores.Add(avaliador)

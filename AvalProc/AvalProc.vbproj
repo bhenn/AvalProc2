@@ -169,11 +169,12 @@
     <Compile Include="Controllers\AvaliacaoController.vb" />
     <Compile Include="Controllers\AvaliadorController.vb" />
     <Compile Include="Controllers\CategoriaController.vb" />
-    <Compile Include="Controllers\ProcessoController.vb" />
+    <Compile Include="Controllers\AvaliacaoProcessoController.vb" />
     <Compile Include="Controllers\EmpresaController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Controllers\MpController.vb" />
     <Compile Include="Controllers\PaController.vb" />
+    <Compile Include="Controllers\ProcessoController.vb" />
     <Compile Include="Controllers\SubcategoriaController.vb" />
     <Compile Include="Controllers\TesteController.vb" />
     <Compile Include="Controllers\TipoAvaliadorController.vb" />
@@ -241,11 +242,16 @@
       <DependentUpon>201306082044562_teste1.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201306082044562_teste1.vb" />
+    <Compile Include="Migrations\201306092228025_avaliacaoProcesso.Designer.vb">
+      <DependentUpon>201306092228025_avaliacaoProcesso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201306092228025_avaliacaoProcesso.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\Avaliacao.vb" />
     <Compile Include="Models\Avaliacao_Avaliador.vb" />
     <Compile Include="Models\Avaliador.vb" />
     <Compile Include="Models\Categoria.vb" />
+    <Compile Include="Models\Avaliacao_Processo.vb" />
     <Compile Include="Models\Processo.vb" />
     <Compile Include="Models\Mp.vb" />
     <Compile Include="Models\Pa.vb" />
@@ -315,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201306082044562_teste1.resx">
       <DependentUpon>201306082044562_teste1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306092228025_avaliacaoProcesso.resx">
+      <DependentUpon>201306092228025_avaliacaoProcesso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -462,10 +471,13 @@
     <Content Include="Views\Avaliador\List.vbhtml" />
     <Content Include="Views\Avaliacao\List.vbhtml" />
     <Content Include="Views\AvaliacaoAvaliador\List.vbhtml" />
+    <Content Include="Views\Processo\Index.vbhtml" />
     <Content Include="Views\Processo\Create.vbhtml" />
     <Content Include="Views\Processo\Edit.vbhtml" />
-    <Content Include="Views\Processo\Index.vbhtml" />
     <Content Include="Views\Processo\List.vbhtml" />
+    <Content Include="Views\AvaliacaoProcesso\Create.vbhtml" />
+    <Content Include="Views\AvaliacaoProcesso\Index.vbhtml" />
+    <Content Include="Views\AvaliacaoProcesso\List.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

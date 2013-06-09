@@ -2,26 +2,24 @@
     ViewData("Title") = "Avaliador"
 End Code
 
-<div id="commonMessage" class="alert alert-success" style="display: none;"></div>
 <p>
-    @Html.ActionLink("Novo", "Create",  New With{.avalId = ViewBag.avalId}, New With{.class = "btn btn-small createLink"})
+    @Html.ActionLink("Novo", "Create", New With {.avalId = ViewBag.avalId}, New With {.class = "btn btn-small createAvaliadorLink"})
 </p>
 
-<div id="lista">
+<div id="listaAvaliador">
     @code
         Html.RenderAction("List", New With {.avalId = ViewBag.avalId})
     End Code
 
 </div>
 
-<div id="updateDialog" ></div>
+<div id="updateDialogAvaliador" ></div>
 
 <script type="text/javascript">
     var linkObj;
     $(function () {
-        $('.editLink').button();
 
-        $('#updateDialog').dialog({
+        $('#updateDialogAvaliador').dialog({
             autoOpen: false,
             width: 400,
             resizable: false,
@@ -37,16 +35,16 @@ End Code
             }
         });
 
-        atribuiAcao();
+        atribuiAcaoAvaliador();
 
     })
 
-    function atribuiAcao() {
+    function atribuiAcaoAvaliador() {
         //CREATE
-        $(".createLink").click(function () {
+        $(".createAvaliadorLink").click(function () {
             //change the title of the dialog
             linkObj = $(this);
-            var dialogDiv = $('#updateDialog');
+            var dialogDiv = $('#updateDialogAvaliador');
             var viewUrl = linkObj.attr('href');
             $.get(viewUrl, function (data) {
                 dialogDiv.html(data);
@@ -64,26 +62,24 @@ End Code
             });
             return false;
         });
-
-
     }
 
 
 
-    function createSuccess(data) {
-        atualizaLista(data, "Avaliador associado com sucesso");
+    function createAvaliadorSuccess(data) {
+        atualizaListaAvaliador(data, "Avaliador associado com sucesso");
     }
 
-    function deleteSuccess(data) {
-        atualizaLista(data, "Avaliador desassociado com sucesso");
+    function deleteAvaliadorSuccess(data) {
+        atualizaListaAvaliador(data, "Avaliador desassociado com sucesso");
     }
 
-    function atualizaLista(data, mensagem) {
-        $('#lista').html(data);
+    function atualizaListaAvaliador(data, mensagem) {
+        $('#listaAvaliador').html(data);
 
-        atribuiAcao();
+        atribuiAcaoAvaliador();
 
-        $('#updateDialog').dialog('close');
+        $('#updateDialogAvaliador').dialog('close');
         $('#commonMessage').html(mensagem);
         $('#commonMessage').fadeIn('slow');
         $('#commonMessage').fadeOut(4000);

@@ -1,21 +1,20 @@
-﻿@ModelType IEnumerable(Of AvalProc.processo)
+﻿@ModelType IEnumerable(Of AvalProc.Processo)
 
 @Code
-    ViewData("Title") = "Processo"
+    ViewData("Title") = "Index"
 End Code
 
 <h3>Processos</h3>
 <div id="commonMessage" class="alert alert-success" style="display: none; float:none  "></div>
- 
+
 <p>
-    @Html.ActionLink("Novo", "Create", Nothing, New With {.class = "btn btn-small createLink"})
+    @Html.ActionLink("Novo", "Create", Nothing, New With{.class = "btn btn-small createLink"})
 </p>
 
 <div id="lista">
     @code
         Html.RenderAction("List")
     End Code
-
 </div>
 
 <div id="updateDialog" title="Alterar Processo"></div>

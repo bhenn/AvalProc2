@@ -24,7 +24,7 @@
 
         @code
             Dim ajaxOptions As New AjaxOptions
-            ajaxOptions.OnSuccess = "deleteSuccess"
+            ajaxOptions.OnSuccess = "deleteAvaliacaoSuccess"
             ajaxOptions.OnFailure = "alert('Erro desconhecido');"
             ajaxOptions.Confirm = "Tem certeza que deseja excluir ?"
             ajaxOptions.HttpMethod = "POST"
