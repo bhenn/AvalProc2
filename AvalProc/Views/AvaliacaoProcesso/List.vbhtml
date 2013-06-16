@@ -1,6 +1,6 @@
 ﻿@modeltype List(Of AvalProc.Avaliacao_Processo)
 
-<table class="table table-striped">
+<table class="table table-striped table-condensed">
     <tr>
         <th>Processo</th>
         <th>Nível</th>
@@ -24,7 +24,7 @@
             ajaxOptions.OnSuccess = "desassociaProcessoSuccess"
             End Code
 
-            <td>
+            <td style="text-align:right">
                 @Ajax.ActionLink("Excluir", "Delete", New With {.controller = "AvaliacaoProcesso", .avalId = 1, .avaliacaoProcessoId = item.Id}, ajaxOptions, New With {.class = "btn"})
             </td>
         </tr>

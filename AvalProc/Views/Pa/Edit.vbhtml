@@ -1,45 +1,29 @@
 ﻿@ModelType AvalProc.Pa
 
-@Code
-    ViewData("Title") = "Edit"
-End Code
-
-<h2>Edit</h2>
-
-@Using Html.BeginForm()
+@Using (Ajax.BeginForm("Edit", "Pa", New AjaxOptions With {
+            .InsertionMode = InsertionMode.Replace,
+            .HttpMethod = "POST",
+            .OnSuccess = "updateSuccess"
+        }, New With {.id = "updatePAForm"}))
+    
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(True)
 
     @<fieldset>
-        <legend>Pa</legend>
+        <legend>Alterar Atributo de Processo</legend>
 
         @Html.HiddenFor(Function(model) model.Id)
 
-        <div class="editor-label">
             @Html.LabelFor(Function(model) model.Nome)
-        </div>
-        <div class="editor-field">
             @Html.EditorFor(Function(model) model.Nome)
             @Html.ValidationMessageFor(Function(model) model.Nome)
-        </div>
 
-        <div class="editor-label">
             @Html.LabelFor(Function(model) model.Descricao)
-        </div>
-        <div class="editor-field">
             @Html.EditorFor(Function(model) model.Descricao)
             @Html.ValidationMessageFor(Function(model) model.Descricao)
-        </div>
 
-        <p>
-            <input type="submit" value="Save" />
-        </p>
     </fieldset>
 End Using
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @Section Scripts
     @Scripts.Render("~/bundles/jqueryval")

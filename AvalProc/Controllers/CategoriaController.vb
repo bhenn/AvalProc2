@@ -10,25 +10,18 @@ Public Class CategoriaController
     ' GET: /Categoria/
 
     Function Index() As ActionResult
-        Return View(db.Categorias.ToList())
+        Return View()
     End Function
 
-    '
-    ' GET: /Categoria/Details/5
-
-    Function Details(Optional ByVal id As Integer = Nothing) As ActionResult
-        Dim categoria As Categoria = db.Categorias.Find(id)
-        If IsNothing(categoria) Then
-            Return HttpNotFound()
-        End If
-        Return View(categoria)
+    Function List() As ActionResult
+        Return PartialView(db.Categorias.ToList())
     End Function
 
     '
     ' GET: /Categoria/Create
 
     Function Create() As ActionResult
-        Return View()
+        Return PartialView()
     End Function
 
     '
@@ -40,10 +33,10 @@ Public Class CategoriaController
         If ModelState.IsValid Then
             db.Categorias.Add(categoria)
             db.SaveChanges()
-            Return RedirectToAction("Index")
+            Return RedirectToAction("List")
         End If
 
-        Return View(categoria)
+        Return PartialView(categoria)
     End Function
 
     '
@@ -54,7 +47,7 @@ Public Class CategoriaController
         If IsNothing(categoria) Then
             Return HttpNotFound()
         End If
-        Return View(categoria)
+        Return PartialView(categoria)
     End Function
 
     '
@@ -66,34 +59,20 @@ Public Class CategoriaController
         If ModelState.IsValid Then
             db.Entry(categoria).State = EntityState.Modified
             db.SaveChanges()
-            Return RedirectToAction("Index")
+            Return RedirectToAction("List")
         End If
 
-        Return View(categoria)
-    End Function
-
-    '
-    ' GET: /Categoria/Delete/5
-
-    Function Delete(Optional ByVal id As Integer = Nothing) As ActionResult
-        Dim categoria As Categoria = db.Categorias.Find(id)
-        If IsNothing(categoria) Then
-            Return HttpNotFound()
-        End If
-        Return View(categoria)
+        Return PartialView(categoria)
     End Function
 
     '
     ' POST: /Categoria/Delete/5
-
     <HttpPost()> _
-    <ActionName("Delete")> _
-    <ValidateAntiForgeryToken()> _
-    Function DeleteConfirmed(ByVal id As Integer) As RedirectToRouteResult
+    Function Delete(ByVal id As Integer) As RedirectToRouteResult
         Dim categoria As Categoria = db.Categorias.Find(id)
         db.Categorias.Remove(categoria)
         db.SaveChanges()
-        Return RedirectToAction("Index")
+        Return RedirectToAction("List")
     End Function
 
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)

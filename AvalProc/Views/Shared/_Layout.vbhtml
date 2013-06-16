@@ -24,7 +24,7 @@
     </div>
     <div class="container">
         <div class="row">
-            @RenderPage("~/Views/Shared/_MenuDireita.vbhtml")
+                    @RenderPage("~/Views/Shared/_MenuDireita.vbhtml")        
             <div class="span9">
                 @RenderBody()
             </div>

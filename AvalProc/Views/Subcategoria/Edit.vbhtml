@@ -1,37 +1,31 @@
 ﻿@ModelType AvalProc.SubCategoria
 
-@Code
-    ViewData("Title") = "Edit"
-End Code
-
-<h2>Edit</h2>
-
-@Using Html.BeginForm()
+@Using (Ajax.BeginForm("Edit", "SubCategoria", New AjaxOptions With {
+            .InsertionMode = InsertionMode.Replace,
+            .HttpMethod = "POST",
+            .OnSuccess = "updateSuccess"
+        }, New With {.id = "updateSubCategoriaForm"}))
+    
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(True)
 
     @<fieldset>
-        <legend>SubCategoria</legend>
+        <legend>Alterar Subcategoria</legend>
 
         @Html.HiddenFor(Function(model) model.Id)
 
-        <div class="editor-label">
             @Html.LabelFor(Function(model) model.Descricao)
-        </div>
-        <div class="editor-field">
             @Html.EditorFor(Function(model) model.Descricao)
             @Html.ValidationMessageFor(Function(model) model.Descricao)
-        </div>
 
-        <p>
-            <input type="submit" value="Save" />
-        </p>
+            @Html.LabelFor(Function(model) model.Categoria)
+            @*Html.DropDownListFor(Function(model) model.CategoriaId, ViewBag.categoriaId)*@
+            @Html.DropDownListFor(Function(model) model.CategoriaId , New SelectList(ViewBag.categorias, "Id", "Descricao", model.CategoriaId))
+
+            @Html.ValidationMessageFor(Function(model) model.Categoria)
+
     </fieldset>
 End Using
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @Section Scripts
     @Scripts.Render("~/bundles/jqueryval")

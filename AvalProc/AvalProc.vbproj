@@ -468,33 +468,25 @@
     <Content Include="Views\Shared\_MenuDireita.vbhtml" />
     <Content Include="Views\Home\Index.vbhtml" />
     <Content Include="Views\Empresa\Index.vbhtml" />
-    <Content Include="Views\Empresa\Details.vbhtml" />
     <Content Include="Views\Empresa\Create.vbhtml" />
     <Content Include="Views\Empresa\Edit.vbhtml" />
-    <Content Include="Views\Empresa\Delete.vbhtml" />
     <Content Include="Views\Avaliador\Index.vbhtml" />
     <Content Include="Views\Avaliador\Create.vbhtml" />
     <Content Include="Views\Avaliador\Edit.vbhtml" />
     <Content Include="Views\Categoria\Index.vbhtml" />
-    <Content Include="Views\Categoria\Details.vbhtml" />
     <Content Include="Views\Categoria\Create.vbhtml" />
     <Content Include="Views\Categoria\Edit.vbhtml" />
-    <Content Include="Views\Categoria\Delete.vbhtml" />
     <Content Include="Views\Subcategoria\Index.vbhtml" />
-    <Content Include="Views\Subcategoria\Details.vbhtml" />
     <Content Include="Views\Subcategoria\Create.vbhtml" />
     <Content Include="Views\Subcategoria\Edit.vbhtml" />
-    <Content Include="Views\Subcategoria\Delete.vbhtml" />
     <Content Include="Views\Usuario\Index.vbhtml" />
     <Content Include="Views\Usuario\Create.vbhtml" />
     <Content Include="Views\Usuario\Delete.vbhtml" />
     <Content Include="Views\Usuario\Login.vbhtml" />
     <Content Include="Views\Home\About.vbhtml" />
     <Content Include="Views\Pa\Index.vbhtml" />
-    <Content Include="Views\Pa\Details.vbhtml" />
     <Content Include="Views\Pa\Create.vbhtml" />
     <Content Include="Views\Pa\Edit.vbhtml" />
-    <Content Include="Views\Pa\Delete.vbhtml" />
     <Content Include="Views\Avaliacao\Index.vbhtml" />
     <Content Include="Views\Avaliacao\Create.vbhtml" />
     <Content Include="Views\TipoAvaliador\Index.vbhtml" />
@@ -517,6 +509,10 @@
     <Content Include="Views\AvaliacaoProcesso\Index.vbhtml" />
     <Content Include="Views\AvaliacaoProcesso\List.vbhtml" />
     <Content Include="Views\AvaliacaoProcessoPa\Edit.vbhtml" />
+    <Content Include="Views\Empresa\List.vbhtml" />
+    <Content Include="Views\Categoria\List.vbhtml" />
+    <Content Include="Views\Subcategoria\List.vbhtml" />
+    <Content Include="Views\Pa\List.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

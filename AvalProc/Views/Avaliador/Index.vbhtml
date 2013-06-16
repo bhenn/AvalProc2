@@ -1,9 +1,5 @@
 ﻿@ModelType IEnumerable(Of AvalProc.Avaliador)
 
-@Code
-    ViewData("Title") = "Avaliador"
-End Code
-
 <h3>Avaliadores</h3>
 <div id="commonMessage" class="alert alert-success" style="display: none; float:none  "></div>
  
@@ -18,7 +14,7 @@ End Code
 
 </div>
 
-<div id="updateDialog" title="Alterar Avaliador"></div>
+<div id="updateDialog" title="Avaliador"></div>
 
 <script type="text/javascript">
     var linkObj;

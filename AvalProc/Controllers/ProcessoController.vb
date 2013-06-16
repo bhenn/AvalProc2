@@ -1,5 +1,6 @@
 ﻿Imports System.Data.Entity
 
+<Authorize>
 Public Class ProcessoController
     Inherits System.Web.Mvc.Controller
 
@@ -15,7 +16,7 @@ Public Class ProcessoController
     Function List() As ActionResult
         Return PartialView(db.Processos.Include(Function(x) x.SubCategoria).ToList())
     End Function
-    
+
     '
     ' GET: /Processo/Create
 
@@ -50,7 +51,7 @@ Public Class ProcessoController
         If IsNothing(processo) Then
             Return HttpNotFound()
         End If
-        ViewBag.SubCategoriaId = New SelectList(db.SubCategorias, "Id", "Descricao", processo.SubCategoriaId)
+        ViewBag.SubCategorias = db.SubCategorias.ToList
         Return PartialView(processo)
     End Function
 

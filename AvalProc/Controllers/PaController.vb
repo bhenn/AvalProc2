@@ -10,25 +10,18 @@ Public Class PaController
     ' GET: /Pa/
 
     Function Index() As ActionResult
-        Return View(db.Pas.ToList())
+        Return View()
     End Function
 
-    '
-    ' GET: /Pa/Details/5
-
-    Function Details(Optional ByVal id As Integer = Nothing) As ActionResult
-        Dim pa As Pa = db.Pas.Find(id)
-        If IsNothing(pa) Then
-            Return HttpNotFound()
-        End If
-        Return View(pa)
+    Function List() As ActionResult
+        Return PartialView(db.Pas.ToList())
     End Function
 
     '
     ' GET: /Pa/Create
 
     Function Create() As ActionResult
-        Return View()
+        Return PartialView()
     End Function
 
     '
@@ -40,10 +33,10 @@ Public Class PaController
         If ModelState.IsValid Then
             db.Pas.Add(pa)
             db.SaveChanges()
-            Return RedirectToAction("Index")
+            Return RedirectToAction("List")
         End If
 
-        Return View(pa)
+        Return PartialView(pa)
     End Function
 
     '
@@ -54,7 +47,7 @@ Public Class PaController
         If IsNothing(pa) Then
             Return HttpNotFound()
         End If
-        Return View(pa)
+        Return PartialView(pa)
     End Function
 
     '
@@ -66,34 +59,21 @@ Public Class PaController
         If ModelState.IsValid Then
             db.Entry(pa).State = EntityState.Modified
             db.SaveChanges()
-            Return RedirectToAction("Index")
+            Return RedirectToAction("List")
         End If
 
-        Return View(pa)
-    End Function
-
-    '
-    ' GET: /Pa/Delete/5
-
-    Function Delete(Optional ByVal id As Integer = Nothing) As ActionResult
-        Dim pa As Pa = db.Pas.Find(id)
-        If IsNothing(pa) Then
-            Return HttpNotFound()
-        End If
-        Return View(pa)
+        Return PartialView(pa)
     End Function
 
     '
     ' POST: /Pa/Delete/5
 
     <HttpPost()> _
-    <ActionName("Delete")> _
-    <ValidateAntiForgeryToken()> _
-    Function DeleteConfirmed(ByVal id As Integer) As RedirectToRouteResult
+    Function Delete(ByVal id As Integer) As RedirectToRouteResult
         Dim pa As Pa = db.Pas.Find(id)
         db.Pas.Remove(pa)
         db.SaveChanges()
-        Return RedirectToAction("Index")
+        Return RedirectToAction("List")
     End Function
 
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)

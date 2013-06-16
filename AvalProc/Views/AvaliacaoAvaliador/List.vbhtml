@@ -21,7 +21,7 @@
             ajaxOptions.OnSuccess = "deleteAvaliadorSuccess"
             End Code
 
-            <td>
+            <td style="text-align:right">
                 @Ajax.ActionLink("Excluir", "Delete", New With {.controller = "AvaliacaoAvaliador", .avalId = 1, .avaliacaoAvaliadorId = item.Id}, ajaxOptions,New With{.class = "btn"})
             </td>
         </tr>

@@ -10,25 +10,18 @@ Public Class EmpresaController
     ' GET: /Empresa/
 
     Function Index() As ActionResult
-        Return View(db.Empresas.ToList())
+        Return View()
     End Function
 
-    '
-    ' GET: /Empresa/Details/5
-
-    Function Details(Optional ByVal id As Integer = Nothing) As ActionResult
-        Dim empresa As Empresa = db.Empresas.Find(id)
-        If IsNothing(empresa) Then
-            Return HttpNotFound()
-        End If
-        Return View(empresa)
+    Function List() As ActionResult
+        Return PartialView(db.Empresas.ToList())
     End Function
 
     '
     ' GET: /Empresa/Create
 
     Function Create() As ActionResult
-        Return View()
+        Return PartialView()
     End Function
 
     '
@@ -40,10 +33,10 @@ Public Class EmpresaController
         If ModelState.IsValid Then
             db.Empresas.Add(empresa)
             db.SaveChanges()
-            Return RedirectToAction("Index")
+            Return RedirectToAction("List")
         End If
 
-        Return View(empresa)
+        Return PartialView(empresa)
     End Function
 
     '
@@ -54,7 +47,7 @@ Public Class EmpresaController
         If IsNothing(empresa) Then
             Return HttpNotFound()
         End If
-        Return View(empresa)
+        Return PartialView(empresa)
     End Function
 
     '
@@ -66,34 +59,21 @@ Public Class EmpresaController
         If ModelState.IsValid Then
             db.Entry(empresa).State = EntityState.Modified
             db.SaveChanges()
-            Return RedirectToAction("Index")
+            Return RedirectToAction("List")
         End If
 
-        Return View(empresa)
-    End Function
-
-    '
-    ' GET: /Empresa/Delete/5
-
-    Function Delete(Optional ByVal id As Integer = Nothing) As ActionResult
-        Dim empresa As Empresa = db.Empresas.Find(id)
-        If IsNothing(empresa) Then
-            Return HttpNotFound()
-        End If
-        Return View(empresa)
+        Return PartialView(empresa)
     End Function
 
     '
     ' POST: /Empresa/Delete/5
 
     <HttpPost()> _
-    <ActionName("Delete")> _
-    <ValidateAntiForgeryToken()> _
-    Function DeleteConfirmed(ByVal id As Integer) As RedirectToRouteResult
+    Function Delete(ByVal id As Integer) As RedirectToRouteResult
         Dim empresa As Empresa = db.Empresas.Find(id)
         db.Empresas.Remove(empresa)
         db.SaveChanges()
-        Return RedirectToAction("Index")
+        Return RedirectToAction("List")
     End Function
 
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)

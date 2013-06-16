@@ -1,53 +1,33 @@
 ﻿@ModelType AvalProc.Empresa
 
-@Code
-    ViewData("Title") = "Edit"
-End Code
-
-<h2>Edit</h2>
-
-@Using Html.BeginForm()
+@Using (Ajax.BeginForm("Edit", "Empresa", New AjaxOptions With {
+            .InsertionMode = InsertionMode.Replace,
+            .HttpMethod = "POST",
+            .OnSuccess = "updateSuccess"
+        }, New With {.id = "updateEmpresaForm"}))
+    
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(True)
 
     @<fieldset>
-        <legend>Empresa</legend>
+        <legend>Alterar Empresa</legend>
 
         @Html.HiddenFor(Function(model) model.Id)
 
-        <div class="editor-label">
-            @Html.LabelFor(Function(model) model.Nome)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(Function(model) model.Nome)
-            @Html.ValidationMessageFor(Function(model) model.Nome)
-        </div>
+        @Html.LabelFor(Function(model) model.Nome)
+        @Html.EditorFor(Function(model) model.Nome)
+        @Html.ValidationMessageFor(Function(model) model.Nome)
 
-        <div class="editor-label">
-            @Html.LabelFor(Function(model) model.Cnpj)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(Function(model) model.Cnpj)
-            @Html.ValidationMessageFor(Function(model) model.Cnpj)
-        </div>
+        @Html.LabelFor(Function(model) model.Cnpj)
+        @Html.EditorFor(Function(model) model.Cnpj)
+        @Html.ValidationMessageFor(Function(model) model.Cnpj)
 
-        <div class="editor-label">
-            @Html.LabelFor(Function(model) model.Endereco)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(Function(model) model.Endereco)
-            @Html.ValidationMessageFor(Function(model) model.Endereco)
-        </div>
+        @Html.LabelFor(Function(model) model.Endereco)
+        @Html.EditorFor(Function(model) model.Endereco)
+        @Html.ValidationMessageFor(Function(model) model.Endereco)
 
-        <p>
-            <input type="submit" value="Save" />
-        </p>
     </fieldset>
 End Using
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @Section Scripts
     @Scripts.Render("~/bundles/jqueryval")

@@ -1,4 +1,4 @@
-﻿@ModelType avalproc.Usuario  
+﻿@ModelType avalproc.Usuario 
 
 
 @Code
@@ -6,23 +6,28 @@
 End Code
 
 
-<div class="span3">
-    
-    
-        @Using Html.BeginForm()
-            
-        @<fieldset>
-            <legend>Login</legend>
+<div class="span4">
 
-            <input type="text" class="input-block-level" id="Email" name="Email" placeholder="Email" />
-            <input type="password" class="input-block-level" id="Senha" name="Senha" placeholder="Senha" >
+    @Using Html.BeginForm()
+        
+        @<div class="form-signin">
 
-            <p>
-                <button class="btn" type="submit">Login</button>
-            </p>
-         </fieldset>
+            <fieldset>
+                <legend>Login</legend>
+
+                <input type="text" class="input-block-level" id="Email" name="Email" placeholder="Email" />
+                <input type="password" class="input-block-level" id="Senha" name="Senha" placeholder="Senha">
+
+                <p>
+                    <button class="btn" type="submit">Login</button>
+                </p>
+            </fieldset>
             
+        </div>
+
         End Using
+
+
 
 </div>
 
