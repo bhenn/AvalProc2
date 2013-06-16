@@ -29,6 +29,20 @@ Public Class AvaliacaoProcessoController
 
     <HttpPost()> _
     Function Create(ByVal avaliacaoProcesso As Avaliacao_Processo) As ActionResult
+        'Lista de PA --------------
+        Dim listaAvaliacaoProcessosPas As New List(Of Avaliacao_Processo_Pa)
+        Dim listaPas As New List(Of Pa)
+        listaPas = db.Pas.ToList()
+        For Each item As Pa In listaPas
+            Dim avaliacaoPa As New Avaliacao_Processo_Pa
+            avaliacaoPa.AvaliacaoProcessoId = avaliacaoProcesso.Id
+            avaliacaoPa.PaId = item.Id
+            listaAvaliacaoProcessosPas.Add(avaliacaoPa)
+        Next
+
+        avaliacaoProcesso.AvaliacaoProcessoPas = listaAvaliacaoProcessosPas
+        '-------------------------
+
         If ModelState.IsValid Then
             db.AvaliacoesProcessos.Add(avaliacaoProcesso)
             db.SaveChanges()

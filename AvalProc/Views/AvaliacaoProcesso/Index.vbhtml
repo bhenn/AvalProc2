@@ -62,6 +62,29 @@ End Code
             return false;
         });
 
+        //EDIT
+        $(".editAvaliacaoProcessoPaLink").click(function () {
+            //change the title of the dialog
+            linkObj = $(this);
+            var dialogDiv = $('#updateDialogProcesso');
+            var viewUrl = linkObj.attr('href');
+            $.get(viewUrl, function (data) {
+                dialogDiv.html(data);
+                //validation
+                var $form = $("#updateAvaliacaoProcessoForm");
+                // Unbind existing validation
+                $form.unbind();
+                $form.data("validator", null);
+                // Check document for changes
+                $.validator.unobtrusive.parse(document);
+                // Re add validation with changes
+                $form.validate($form.data("unobtrusiveValidation").options);
+                //open dialog
+                dialogDiv.dialog('open');
+            });
+            return false;
+        });
+        
 
     }
 
@@ -73,6 +96,10 @@ End Code
 
     function desassociaProcessoSuccess(data) {
         atualizaListaProcesso(data, "Processo desassociado com sucesso");
+    }
+
+    function editAvaliacaoProcessoSuccess(data) {
+        atualizaListaProcesso(data, "");
     }
 
     function atualizaListaProcesso(data, mensagem) {

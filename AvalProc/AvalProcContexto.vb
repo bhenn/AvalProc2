@@ -14,8 +14,6 @@ Public Class AvalProcContexto : Inherits DbContext
 
     Public Property Pas As DbSet(Of Pa)
 
-    Public Property Mps As DbSet(Of Mp)
-
     Public Property Avaliacoes As DbSet(Of Avaliacao)
 
     Public Property TipoAvaliadores As DbSet(Of TipoAvaliador)
@@ -27,5 +25,9 @@ Public Class AvalProcContexto : Inherits DbContext
     Public Property Processos As DbSet(Of Processo)
 
     Public Property AvaliacoesProcessos As DbSet(Of Avaliacao_Processo)
+
+    Public Property AvaliacoesProcessosPas As DbSet(Of Avaliacao_Processo_Pa)
+
+    Public Property Pontuacoes As DbSet(Of Pontuacao)
 
 End Class

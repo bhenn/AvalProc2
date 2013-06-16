@@ -167,12 +167,12 @@
     <Compile Include="AvalProcContexto.vb" />
     <Compile Include="Controllers\AvaliacaoAvaliadorController.vb" />
     <Compile Include="Controllers\AvaliacaoController.vb" />
+    <Compile Include="Controllers\AvaliacaoProcessoPaController.vb" />
     <Compile Include="Controllers\AvaliadorController.vb" />
     <Compile Include="Controllers\CategoriaController.vb" />
     <Compile Include="Controllers\AvaliacaoProcessoController.vb" />
     <Compile Include="Controllers\EmpresaController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
-    <Compile Include="Controllers\MpController.vb" />
     <Compile Include="Controllers\PaController.vb" />
     <Compile Include="Controllers\ProcessoController.vb" />
     <Compile Include="Controllers\SubcategoriaController.vb" />
@@ -246,14 +246,39 @@
       <DependentUpon>201306092228025_avaliacaoProcesso.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201306092228025_avaliacaoProcesso.vb" />
+    <Compile Include="Migrations\201306152330187_retiradoMP.Designer.vb">
+      <DependentUpon>201306152330187_retiradoMP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201306152330187_retiradoMP.vb" />
+    <Compile Include="Migrations\201306152339366_avaliacaoPA.Designer.vb">
+      <DependentUpon>201306152339366_avaliacaoPA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201306152339366_avaliacaoPA.vb" />
+    <Compile Include="Migrations\201306152344510_asd.Designer.vb">
+      <DependentUpon>201306152344510_asd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201306152344510_asd.vb" />
+    <Compile Include="Migrations\201306152356356_avalprocessopa.Designer.vb">
+      <DependentUpon>201306152356356_avalprocessopa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201306152356356_avalprocessopa.vb" />
+    <Compile Include="Migrations\201306160223588_pontuacao.Designer.vb">
+      <DependentUpon>201306160223588_pontuacao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201306160223588_pontuacao.vb" />
+    <Compile Include="Migrations\201306160336581_retiradoalgumacoisa.Designer.vb">
+      <DependentUpon>201306160336581_retiradoalgumacoisa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201306160336581_retiradoalgumacoisa.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\Avaliacao.vb" />
     <Compile Include="Models\Avaliacao_Avaliador.vb" />
     <Compile Include="Models\Avaliador.vb" />
     <Compile Include="Models\Categoria.vb" />
     <Compile Include="Models\Avaliacao_Processo.vb" />
+    <Compile Include="Models\Avaliacao_Processo_Pa.vb" />
+    <Compile Include="Models\Pontuacao.vb" />
     <Compile Include="Models\Processo.vb" />
-    <Compile Include="Models\Mp.vb" />
     <Compile Include="Models\Pa.vb" />
     <Compile Include="Models\Empresa.vb" />
     <Compile Include="Models\SubCategoria.vb" />
@@ -324,6 +349,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201306092228025_avaliacaoProcesso.resx">
       <DependentUpon>201306092228025_avaliacaoProcesso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306152330187_retiradoMP.resx">
+      <DependentUpon>201306152330187_retiradoMP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306152339366_avaliacaoPA.resx">
+      <DependentUpon>201306152339366_avaliacaoPA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306152344510_asd.resx">
+      <DependentUpon>201306152344510_asd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306152356356_avalprocessopa.resx">
+      <DependentUpon>201306152356356_avalprocessopa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306160223588_pontuacao.resx">
+      <DependentUpon>201306160223588_pontuacao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306160336581_retiradoalgumacoisa.resx">
+      <DependentUpon>201306160336581_retiradoalgumacoisa.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -452,11 +495,6 @@
     <Content Include="Views\Pa\Create.vbhtml" />
     <Content Include="Views\Pa\Edit.vbhtml" />
     <Content Include="Views\Pa\Delete.vbhtml" />
-    <Content Include="Views\Mp\Index.vbhtml" />
-    <Content Include="Views\Mp\Details.vbhtml" />
-    <Content Include="Views\Mp\Create.vbhtml" />
-    <Content Include="Views\Mp\Edit.vbhtml" />
-    <Content Include="Views\Mp\Delete.vbhtml" />
     <Content Include="Views\Avaliacao\Index.vbhtml" />
     <Content Include="Views\Avaliacao\Create.vbhtml" />
     <Content Include="Views\TipoAvaliador\Index.vbhtml" />
@@ -478,6 +516,7 @@
     <Content Include="Views\AvaliacaoProcesso\Create.vbhtml" />
     <Content Include="Views\AvaliacaoProcesso\Index.vbhtml" />
     <Content Include="Views\AvaliacaoProcesso\List.vbhtml" />
+    <Content Include="Views\AvaliacaoProcessoPa\Edit.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

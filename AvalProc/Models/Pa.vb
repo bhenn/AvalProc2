@@ -13,6 +13,6 @@ Public Class Pa
     <Display(Name:="Descrição")> _
     Public Property Descricao() As String
 
-    Public Property Pas() As List(Of Mp)
+    Public Property AvaliacoesPas As List(Of Avaliacao_Processo_Pa)
 
 End Class

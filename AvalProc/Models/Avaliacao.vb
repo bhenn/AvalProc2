@@ -19,4 +19,5 @@ Public Class Avaliacao
     Public Property AvaliacaoAvaliadores As List(Of Avaliacao_Avaliador)
 
 
+
 End Class

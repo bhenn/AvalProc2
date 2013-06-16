@@ -12,4 +12,9 @@ Public Class Avaliacao_Processo
     Public Property ProcessoId As Integer
     Public Property Processo As Processo
 
+    'Pas
+    Public Property AvaliacaoProcessoPas As List(Of Avaliacao_Processo_Pa)
+
+    Public Property NivelCapacidade As String
+
 End Class
