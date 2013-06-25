@@ -35,7 +35,8 @@
                 </td>
 
                 <td>
-                    @Html.DropDownListFor(Function(modelItem) item.Pontuacao, New SelectList(listPontuacao,"Nome","Nome",item.Pontuacao))
+                    @Html.DropDownListFor(Function(modelItem) item.Pontuacao, New SelectList(listPontuacao,"Nome","Nome",item.Pontuacao),New With{.class = "span1"})
+                    @Html.TextAreaFor(Function(modelItem) item.Observacao, 2, 40, Nothing)
                 </td>
             </tr>
         Next

@@ -13,5 +13,6 @@ Public Class Avaliacao_Processo_Pa
     Public Property Pa As Pa
 
     Public Property Pontuacao As String
+    Public Property Observacao As String
 
 End Class

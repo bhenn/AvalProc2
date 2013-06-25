@@ -26,11 +26,13 @@ Public Class AvaliacaoProcessoPaController
             Dim Pontuacao As String() = colecao.GetValues("$VB$Local_item.Pontuacao")
             Dim avaliacaoId As Integer = Request("avaliacaoId")
             Dim avaliacaoProcessoId As Integer = CInt(Request("avaliacaoProcessoId"))
+            Dim Observacao As String() = colecao.GetValues("$VB$Local_item.Observacao")
 
             For i = 0 To Id.Length - 1
 
                 Dim AvaliacaoProcessoPa As Avaliacao_Processo_Pa = db.AvaliacoesProcessosPas.Find(CInt(Id(i)))
                 AvaliacaoProcessoPa.Pontuacao = Pontuacao(i)
+                AvaliacaoProcessoPa.Observacao = Observacao(i)
 
                 db.Entry(AvaliacaoProcessoPa).State = EntityState.Modified
             Next

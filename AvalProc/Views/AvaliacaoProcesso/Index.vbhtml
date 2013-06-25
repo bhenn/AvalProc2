@@ -20,7 +20,7 @@ End Code
 
         $('#updateDialogProcesso').dialog({
             autoOpen: false,
-            width: 400,
+            width: 600,
             resizable: false,
             modal: true,
             buttons: {
