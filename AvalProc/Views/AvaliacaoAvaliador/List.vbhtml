@@ -1,7 +1,7 @@
 ﻿@modeltype List(Of AvalProc.Avaliacao_Avaliador)
 
 
-<table class="table table-striped">
+<table class="table table-striped table-condensed">
     <tr>
         <th>Avaliador</th>
         <th>Tipo</th>

@@ -15,9 +15,16 @@ End Code
             <fieldset>
                 <legend>Login</legend>
 
+                <div class="input-prepend">
+                <span class="add-on"><i class="icon-envelope"></i></span>
                 <input type="text" class="input-block-level" id="Email" name="Email" placeholder="Email" />
-                <input type="password" class="input-block-level" id="Senha" name="Senha" placeholder="Senha">
+                </div>
 
+                <div class="input-prepend">
+                <span class="add-on"><i class="icon-asterisk"></i></span>
+                <input type="password" class="input-block-level" id="Senha" name="Senha" placeholder="Senha">
+                </div>
+                
                 <p>
                     <button class="btn" type="submit">Login</button>
                 </p>

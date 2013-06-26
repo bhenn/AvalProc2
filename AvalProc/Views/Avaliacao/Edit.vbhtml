@@ -17,12 +17,16 @@ End Code
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="tab1">
+                    <label style="font-weight:bold">
+                        Descrição
+                    </label>
                     <p>
-                    @Html.LabelFor(Function(model) model.Descricao)
                     @Model.Descricao 
                     </p>
+                    <label style="font-weight:bold">
+                        Empresa
+                    </label>
                     <p>
-                        @Html.LabelFor(Function(model) model.Empresa.Nome)
                         @Model.Empresa.Nome 
                     </p>
                 </div>

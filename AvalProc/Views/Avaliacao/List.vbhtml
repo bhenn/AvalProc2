@@ -7,7 +7,7 @@
             @Html.DisplayNameFor(Function(model) model.Descricao)
         </th>
         <th>
-            @Html.DisplayNameFor(Function(model) model.Empresa.Nome)
+            Empresa
         </th>
         <th></th>
     </tr>
