@@ -49,7 +49,7 @@ Public Class UsuarioController
 
     '
     ' GET: /Usuario/Create
-
+    <AllowAnonymous>
     Function Create() As ActionResult
         Return View()
     End Function
@@ -59,6 +59,7 @@ Public Class UsuarioController
 
     <HttpPost()> _
     <ValidateAntiForgeryToken()> _
+    <AllowAnonymous>
     Function Create(ByVal usuario As Usuario) As ActionResult
         If ModelState.IsValid Then
             Dim crypto As New SimpleCrypto.PBKDF2

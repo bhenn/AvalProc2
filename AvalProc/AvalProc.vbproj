@@ -182,98 +182,10 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201305261425403_avaliador.Designer.vb">
-      <DependentUpon>201305261425403_avaliador.vb</DependentUpon>
+    <Compile Include="Migrations\201311080115464_tudo.Designer.vb">
+      <DependentUpon>201311080115464_tudo.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201305261425403_avaliador.vb" />
-    <Compile Include="Migrations\201305261455526_categoria.Designer.vb">
-      <DependentUpon>201305261455526_categoria.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201305261455526_categoria.vb" />
-    <Compile Include="Migrations\201305261927484_subcategoria.Designer.vb">
-      <DependentUpon>201305261927484_subcategoria.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201305261927484_subcategoria.vb" />
-    <Compile Include="Migrations\201305300019552_usuario.Designer.vb">
-      <DependentUpon>201305300019552_usuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201305300019552_usuario.vb" />
-    <Compile Include="Migrations\201305302226330_categoriaid.Designer.vb">
-      <DependentUpon>201305302226330_categoriaid.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201305302226330_categoriaid.vb" />
-    <Compile Include="Migrations\201305302259140_pasEmps.Designer.vb">
-      <DependentUpon>201305302259140_pasEmps.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201305302259140_pasEmps.vb" />
-    <Compile Include="Migrations\201306021726475_avaliacao.Designer.vb">
-      <DependentUpon>201306021726475_avaliacao.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306021726475_avaliacao.vb" />
-    <Compile Include="Migrations\201306021825189_avaliadorTipoAvaliacaoAvaliador.Designer.vb">
-      <DependentUpon>201306021825189_avaliadorTipoAvaliacaoAvaliador.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306021825189_avaliadorTipoAvaliacaoAvaliador.vb" />
-    <Compile Include="Migrations\201306021833111_avaliacaoavaliador.Designer.vb">
-      <DependentUpon>201306021833111_avaliacaoavaliador.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306021833111_avaliacaoavaliador.vb" />
-    <Compile Include="Migrations\201306022029119_testekendo.Designer.vb">
-      <DependentUpon>201306022029119_testekendo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306022029119_testekendo.vb" />
-    <Compile Include="Migrations\201306050004158_seila.Designer.vb">
-      <DependentUpon>201306050004158_seila.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306050004158_seila.vb" />
-    <Compile Include="Migrations\201306050155014_teste.Designer.vb">
-      <DependentUpon>201306050155014_teste.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306050155014_teste.vb" />
-    <Compile Include="Migrations\201306070043189_decorators.Designer.vb">
-      <DependentUpon>201306070043189_decorators.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306070043189_decorators.vb" />
-    <Compile Include="Migrations\201306082012483_processos.Designer.vb">
-      <DependentUpon>201306082012483_processos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306082012483_processos.vb" />
-    <Compile Include="Migrations\201306082044562_teste1.Designer.vb">
-      <DependentUpon>201306082044562_teste1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306082044562_teste1.vb" />
-    <Compile Include="Migrations\201306092228025_avaliacaoProcesso.Designer.vb">
-      <DependentUpon>201306092228025_avaliacaoProcesso.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306092228025_avaliacaoProcesso.vb" />
-    <Compile Include="Migrations\201306152330187_retiradoMP.Designer.vb">
-      <DependentUpon>201306152330187_retiradoMP.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306152330187_retiradoMP.vb" />
-    <Compile Include="Migrations\201306152339366_avaliacaoPA.Designer.vb">
-      <DependentUpon>201306152339366_avaliacaoPA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306152339366_avaliacaoPA.vb" />
-    <Compile Include="Migrations\201306152344510_asd.Designer.vb">
-      <DependentUpon>201306152344510_asd.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306152344510_asd.vb" />
-    <Compile Include="Migrations\201306152356356_avalprocessopa.Designer.vb">
-      <DependentUpon>201306152356356_avalprocessopa.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306152356356_avalprocessopa.vb" />
-    <Compile Include="Migrations\201306160223588_pontuacao.Designer.vb">
-      <DependentUpon>201306160223588_pontuacao.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306160223588_pontuacao.vb" />
-    <Compile Include="Migrations\201306160336581_retiradoalgumacoisa.Designer.vb">
-      <DependentUpon>201306160336581_retiradoalgumacoisa.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306160336581_retiradoalgumacoisa.vb" />
-    <Compile Include="Migrations\201306231833143_obs.Designer.vb">
-      <DependentUpon>201306231833143_obs.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201306231833143_obs.vb" />
+    <Compile Include="Migrations\201311080115464_tudo.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\Avaliacao.vb" />
     <Compile Include="Models\Avaliacao_Avaliador.vb" />
@@ -306,74 +218,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201305261425403_avaliador.resx">
-      <DependentUpon>201305261425403_avaliador.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201305261455526_categoria.resx">
-      <DependentUpon>201305261455526_categoria.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201305261927484_subcategoria.resx">
-      <DependentUpon>201305261927484_subcategoria.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201305300019552_usuario.resx">
-      <DependentUpon>201305300019552_usuario.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201305302226330_categoriaid.resx">
-      <DependentUpon>201305302226330_categoriaid.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201305302259140_pasEmps.resx">
-      <DependentUpon>201305302259140_pasEmps.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306021726475_avaliacao.resx">
-      <DependentUpon>201306021726475_avaliacao.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306021825189_avaliadorTipoAvaliacaoAvaliador.resx">
-      <DependentUpon>201306021825189_avaliadorTipoAvaliacaoAvaliador.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306021833111_avaliacaoavaliador.resx">
-      <DependentUpon>201306021833111_avaliacaoavaliador.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306022029119_testekendo.resx">
-      <DependentUpon>201306022029119_testekendo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306050004158_seila.resx">
-      <DependentUpon>201306050004158_seila.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306050155014_teste.resx">
-      <DependentUpon>201306050155014_teste.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306070043189_decorators.resx">
-      <DependentUpon>201306070043189_decorators.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306082012483_processos.resx">
-      <DependentUpon>201306082012483_processos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306082044562_teste1.resx">
-      <DependentUpon>201306082044562_teste1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306092228025_avaliacaoProcesso.resx">
-      <DependentUpon>201306092228025_avaliacaoProcesso.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306152330187_retiradoMP.resx">
-      <DependentUpon>201306152330187_retiradoMP.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306152339366_avaliacaoPA.resx">
-      <DependentUpon>201306152339366_avaliacaoPA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306152344510_asd.resx">
-      <DependentUpon>201306152344510_asd.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306152356356_avalprocessopa.resx">
-      <DependentUpon>201306152356356_avalprocessopa.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306160223588_pontuacao.resx">
-      <DependentUpon>201306160223588_pontuacao.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306160336581_retiradoalgumacoisa.resx">
-      <DependentUpon>201306160336581_retiradoalgumacoisa.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306231833143_obs.resx">
-      <DependentUpon>201306231833143_obs.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\201311080115464_tudo.resx">
+      <DependentUpon>201311080115464_tudo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -387,7 +233,9 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\PublishProfiles\procaval - FTP %282%29.pubxml" />
     <None Include="My Project\PublishProfiles\ProcAval - FTP.pubxml" />
+    <None Include="My Project\PublishProfiles\procaval - Web Deploy %282%29.pubxml" />
     <None Include="My Project\PublishProfiles\ProcAval - Web Deploy.pubxml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -536,7 +384,9 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

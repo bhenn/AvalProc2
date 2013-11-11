@@ -4,14 +4,14 @@ Imports System.Data.Entity.Migrations.Infrastructure
 Imports System.Resources
 
 Namespace Migrations
-    Public NotInheritable Partial Class retiradoalgumacoisa
+    Public NotInheritable Partial Class tudo
         Implements IMigrationMetadata
     
-        Private ReadOnly Resources As New ResourceManager(GetType(retiradoalgumacoisa))
+        Private ReadOnly Resources As New ResourceManager(GetType(tudo))
         
         Private ReadOnly Property IMigrationMetadata_Id() As String Implements IMigrationMetadata.Id
             Get
-                Return "201306160336581_retiradoalgumacoisa"
+                Return "201311080115464_tudo"
             End Get
         End Property
         
